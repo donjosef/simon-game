@@ -36,6 +36,12 @@ const controller = {
 
   fillRandomArray: function(randBtn) {
     data.randomActiveButtons.push(randBtn);
+
+    setTimeout(() => this.removeActive(randBtn), 300);
+  },
+
+  removeActive: function(randBtn) {
+    randBtn.classList.remove('active');
   }
 }
 
