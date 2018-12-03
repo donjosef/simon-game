@@ -2,7 +2,14 @@
 const data = {
     currentRound: 1,
     randomActiveButtons: [],
-    userAttempts: []
+    userAttempts: [],
+    audios: [
+      "../audios/red.wav",
+      "../audios/yellow.wav",
+      "../audios/green.wav",
+      "../audios/blue.wav"
+   ],
+   failAudio: "../audios/fail.wav"
 };
 
 /* CONTROLLER */
@@ -28,8 +35,9 @@ const controller = {
        setTimeout(() => {
          const random = Math.floor(Math.random() * view.buttons.length);
          const randomButton = view.buttons[random];
-         randomButton.classList.add('active');
          this.fillRandomArray(randomButton);
+         randomButton.classList.add('active');
+         randomButton.querySelector('audio').play();
        }, 800 * i);
     }
   },
@@ -42,7 +50,15 @@ const controller = {
 
   removeActive: function(randBtn) {
     randBtn.classList.remove('active');
-  }
+  },
+
+  getAudios: function() {
+    return data.audios;
+  },
+
+  getFailAudio: function() {
+    return data.failAudio;
+  },
 }
 
 /* VIEW */
@@ -51,9 +67,12 @@ const view = {
     this.buttons = document.querySelectorAll(".innerContainer div");
     this.title = document.querySelector("h2");
     this.failed = document.getElementById("fail"); //fail sound
+    this.failed.src = controller.getFailAudio();
+    const audios = controller.getAudios();
 
     for(let i = 0; i < this.buttons.length; i++) {
         const audioEl = document.createElement("audio");
+        audioEl.src = audios[i];
         this.buttons[i].appendChild(audioEl);
     }
   },
