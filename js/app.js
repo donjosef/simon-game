@@ -5,12 +5,12 @@ const data = {
     randomActiveButtons: [],
     userAttempts: [],
     audios: [
-      "audios/red.wav",
-      "audios/yellow.wav",
-      "audios/green.wav",
-      "audios/blue.wav"
+      "../audios/red.wav",
+      "../audios/yellow.wav",
+      "../audios/green.wav",
+      "../audios/blue.wav"
    ],
-   failAudio: "audios/fail.wav"
+   failAudio: "../audios/fail.wav"
 };
 
 /* CONTROLLER */
