@@ -1,5 +1,7 @@
 # Simon-game clone
 
+[TRY IT OUT HERE](https://donjosef.github.io/simon-game/)
+
 ## Overview
 
 This is the clone of the simon-game, the popular '80s board game. Its part of freecodecamp frontend curriculum, built entirely with vanilla js.
