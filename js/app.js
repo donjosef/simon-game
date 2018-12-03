@@ -26,9 +26,16 @@ const controller = {
     //i.e round 2 -> 2 elements must be guessed. round 4 -> 4 elements must be guessed ecc...
     for(let i = 1; i <= round; i++) {
        setTimeout(() => {
-         console.log(i)
+         const random = Math.floor(Math.random() * view.buttons.length);
+         const randomButton = view.buttons[random];
+         randomButton.classList.add('active');
+         this.fillRandomArray(randomButton);
        }, 800 * i);
     }
+  },
+
+  fillRandomArray: function(randBtn) {
+    data.randomActiveButtons.push(randBtn);
   }
 }
 
@@ -44,6 +51,7 @@ const view = {
         this.buttons[i].appendChild(audioEl);
     }
   },
+
   bindEvents: function() {
     this.buttons.forEach(button => button.addEventListener("click", function() {
       console.log('button clicked')
