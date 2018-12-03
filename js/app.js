@@ -5,12 +5,12 @@ const data = {
     randomActiveButtons: [],
     userAttempts: [],
     audios: [
-      "../audios/red.wav",
-      "../audios/yellow.wav",
-      "../audios/green.wav",
-      "../audios/blue.wav"
+      "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3",
+      "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3",
+      "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3",
+      "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
    ],
-   failAudio: "../audios/fail.wav"
+   failAudio: "https://www.soundjay.com/misc/sounds/fail-buzzer-01.mp3"
 };
 
 /* CONTROLLER */
