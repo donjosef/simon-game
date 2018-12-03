@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 30px;
+}
+.container {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #000;
+    border-radius: 50%;
+    text-align: center;
+    transform: translateY(-40px);
+
+}
+
+.innerContainer {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between; /*funziona solo se l'altezza di questo container è maggiore alla somma dei singoli div. In altre parole align-content funziona solo se il cross axis si sviluppa su piu di una linea*/
+    overflow: hidden;
+}
+
+.container button {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+.innerContainer div {
+    height: 190px; 
+    width: 46%;
+    cursor: pointer;
+}
+
+.active {
+    opacity: 0.78;
+}
+.leftTop {
+    background: hsl(4, 90%, 50%);
+}
+
+.rightTop {
+    background: hsl(54, 100%, 50%);
+}
+.leftBottom {
+    background: hsl(122, 70%, 50%);
+}
+.rightBottom {
+    background: hsl(221, 100%, 50%);
+}
